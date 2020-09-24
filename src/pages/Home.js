@@ -1,11 +1,13 @@
 import React from 'react';
 import './Home.css';
 import {link, Link} from 'react-router-dom';
+import AppsIcon from '@material-ui/icons/Apps'
+import { Avatar } from '@material-ui/core';
 
 const Home = () => {
     return (
       <div className="home">
-        <h1>This is home page</h1>
+        
         <div className="home__header">
           <div className="home__headerLeft">
             {/* Link*/}
@@ -17,12 +19,14 @@ const Home = () => {
             {/*Link */}
             <Link to="/gmail">Gmail</Link>
             <Link to="/images">Images</Link>
-            
             {/* Icon*/}
+            <AppsIcon/>
             {/*Avatar */}
+            <Avatar/>
           </div>
         </div>
-        <div className="home__body"></div>
+        <div className="home__body">
+        </div>
       </div>
     );
 }
