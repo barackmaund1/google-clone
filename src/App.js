@@ -1,15 +1,22 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
 function App() {
   return (
     // BEM
     <div className="app">
-       <h1>Hey Clever Programmer,let build google clone 🚀 </h1>
-      {/* Home (the one with the search on)*/}
-        <Home/>
-      {/*Search (The result page)*/ }
+      <Router>
+        <Switch>
+          <Route path='/search'>
+            <h1>This is search page</h1>
+          </Route>
+          <Route path='/'>
+            <Home/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
