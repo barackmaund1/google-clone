@@ -21,7 +21,7 @@ const Home = () => {
             <Link to="/gmail">Gmail</Link>
             <Link to="/images">Images</Link>
             {/* Icon*/}
-            <AppsIcon/>
+            <AppsIcon className='home__appicon'/>
             {/*Avatar */}
             <Avatar className='home__avatar'/>
           </div>
