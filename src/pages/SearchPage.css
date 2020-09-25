@@ -9,6 +9,22 @@
     border: 30px;
     border-bottom: 1px solid lightgray;
 }
+@media only screen and (max-width: 768px){
+   .searchPage__header{
+       display: flex;
+       flex-direction: column;
+       padding: 0 !important;
+       
+   }
+   .searchPage__logo{
+      margin-top: 10px; 
+      justify-content: center;
+      text-align: center;
+      margin-left: 30%;
+   }
+  
+   
+}
 .searchPage__logo{
    object-fit: contain; 
    height: 50px;

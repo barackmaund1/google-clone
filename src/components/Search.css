@@ -10,6 +10,9 @@
     margin-top: 40px;
     max-width: 560px;
 }
+@media only screen and (max-width: 768px){
+ 
+}
 .search__input > input{
     flex: 1;
     padding: 10px 20px;

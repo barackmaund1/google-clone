@@ -23,7 +23,7 @@ const Home = () => {
             {/* Icon*/}
             <AppsIcon/>
             {/*Avatar */}
-            <Avatar/>
+            <Avatar className='home__avatar'/>
           </div>
         </div>
         <div className="home__body">

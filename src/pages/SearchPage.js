@@ -3,6 +3,7 @@ import './SearchPage.css'
 import { useStateValue } from '../StateProvider';
 import useGoogleSearch from '../useGoogleSearch';
 import Response from '../response'
+import SearchIcon from "@material-ui/icons/Search";
 import { Link } from 'react-router-dom';
 import Search from '../components/Search';
 const SearchPage = () => {
@@ -22,7 +23,11 @@ const SearchPage = () => {
                 </Link>
                 <div className='search__headerBody'>
                   <Search hideButtons/>
-                </div>
+                  <div className='searchPage__option'>
+                       <SearchIcon/>
+                       <Link to='/all'>All</Link>
+                  </div>
+                </div> 
             </div>
             <div className='searchPage__results'>
 
