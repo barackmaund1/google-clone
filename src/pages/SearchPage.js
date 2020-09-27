@@ -11,10 +11,14 @@ import RoomIcon from '@material-ui/icons/Room'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import { Link } from 'react-router-dom';
 import Search from '../components/Search';
+
+
 const SearchPage = () => {
     const [{term}, dispatch] = useStateValue();
     // Live API
     //const {data}=useGoogleSearch(term);
+
+    // mock API
      const data=Response;
     //get the api_keys>> https://developers.google.com/custom-search/v1/using_rest
 
@@ -61,16 +65,39 @@ const SearchPage = () => {
 
               <div className="searchPage__optionsRight">
                 <div className="searchPage__option">
-                   <Link to='/settings'>Settings</Link>
+                  <Link to="/settings">Settings</Link>
                 </div>
                 <div className="searchPage__option">
-                   <Link to='/tools'>Tools</Link>
+                  <Link to="/tools">Tools</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="searchPage__results"></div>
+
+        {true && (
+          <div className="searchPage__results">
+            <p className="searchPage__resultCount">
+              About {data?.searchInformation.formattedTotalResults}
+              results({data?.searchInformation.formattedSearchTime} seconds) for{" "}
+              {term}
+            </p>
+
+            {data?.items.map((item) => (
+              <div className="searchPage__result">
+                <a href={item.link}>
+                {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+                    <img className='searchPage__resultImage' src={item.pagemap?.cse_image.length > 0 && item.pagemap?.cse_image[0]?.src} alt=''/>
+                )}
+                {item.displayLink}👇</a>
+                <a className="searchPage__resultTitle" href={item.link}>
+                  <h2>{item.title}</h2>
+                </a>
+                <p className='searchPage__resultSnippet'>{item.snippet}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     );
 }
