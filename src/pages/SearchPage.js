@@ -34,7 +34,7 @@ const SearchPage = () => {
             />
           </Link>
           <div className="search__headerBody">
-            <Search hideButtons />
+            <Search hideButtons/>
             <div className="searchPage__options">
               <div className="searchPage__optionsLeft">
                 <div className="searchPage__option">
@@ -91,7 +91,7 @@ const SearchPage = () => {
                 )}
                 {item.displayLink}👇</a>
                 <a className="searchPage__resultTitle" href={item.link}>
-                  <h2>{item.title}</h2>
+                  <h2 className="searchPage__resultTitle">{item.title}</h2>
                 </a>
                 <p className='searchPage__resultSnippet'>{item.snippet}</p>
               </div>

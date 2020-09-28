@@ -4,7 +4,7 @@
 @media only screen and (max-width: 768px){
   *{
   width: 100px;
-  object-fit: contain;
+
 }
 }
 body {
